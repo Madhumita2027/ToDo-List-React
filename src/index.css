@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #24c8a4;
+}
+
+.main_div {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.center_div {
+  width: 30%;
+  height: 60vh;
+  background-color: #e2e0e0;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 15px;
+}
+
+h1 {
+  color: #002A53;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.text_button {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.text_button input {
+  height: 30px;
+  width: 60%;
+  margin-right: 20px;
+  background: transparent;
+  text-align: center;
+  border: none;
+  border-bottom: 2px solid #002A53;
+  outline: none;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+}
+
+.text_button .newbtn {
+  width: 25px;
+  height: 40px;
+  background-color: #24c8a4;
+  color: #002A53;
+  border-radius: 50%;
+}
+
+ol {
+  margin-top: 30px;
+}
+
+ol li {
+  list-style-type: none;
+  text-align: left;
+  color: #5e6f81;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.todo_style {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.todo_style .deleteicon {
+  height: 25px;
+  width: 25px;
+  background-color: #8566aa;
+  color: white;
+  border-radius: 50%;
+  margin: 0 15px 0 35px;
+  padding: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+.todo_style .deleteicon:hover {
+  background-color: transparent;
+  box-shadow: 5px 5px 15px -5px rgba(255, 0, 0, 0.5);
+  color: #002A53;
+  cursor: pointer;
+}
+
+@media (max-width:768px) {
+  .center_div {
+    width: 55%;
+  }
+}
