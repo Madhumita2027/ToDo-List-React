@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Button from '@mui/material/Button';
 import AddIcon from '@mui/icons-material/Add';
+import Tooltip from '@mui/material/Tooltip';
 import ListComp from './ListComp';
 
 function App() {
@@ -9,16 +10,31 @@ function App() {
   const [newitem, setNewItem] = useState([]);
 
   const inputEvent = (event) => {
-    setItem(event.target.value);
+      setItem(event.target.value);
   }
 
+
   const addItems = () => {
+
     setNewItem((olditems) => {
       return [...olditems, item];
     })
 
-    setItem(" ");
+    setItem("");
   }
+
+
+  const deleteTask = (id) => {
+    // console.log('deleted');
+
+    setNewItem((olditems) => {
+      return olditems.filter((arrData, index) => {
+        return index !== id;
+      })
+    })
+  }
+
+  console.log(item);
 
   return (
     <>
@@ -28,19 +44,28 @@ function App() {
           <h1>Todo List</h1>
           <br />
           <div className='text_button'>
-            <input type='text'
-            placeholder='Add items'
-            onChange={inputEvent}
-            value={item}
+            <Tooltip title="Enter a task" placement='bottom'>
+              <input type='text'
+              placeholder='Add items'
+              onChange={inputEvent}
+              value={item}
             />
+            </Tooltip>
+            {item ? <Tooltip title="Add" placement='right-start'>
             <Button className='newbtn'
-            onClick={addItems}> <AddIcon /> </Button>
+              onClick={addItems}> <AddIcon /> </Button>
+            </Tooltip> : null}
           </div>
 
           <br />
           <ol>
             {newitem.map((currval, index) => {
-              return <ListComp key={index} text={currval} />
+              return <ListComp 
+              key={index} 
+              text={currval} 
+              id={index} 
+              onSelect={deleteTask}
+              />
             })}
           </ol>
           <br />

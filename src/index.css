@@ -22,7 +22,7 @@ body {
 
 .center_div {
   width: 30%;
-  height: 60vh;
+  height: 70vh;
   background-color: #e2e0e0;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 15px;
@@ -57,15 +57,15 @@ h1 {
 }
 
 .text_button .newbtn {
-  width: 25px;
-  height: 40px;
+  /* width: 25px;
+  height: 40px; */
   background-color: #24c8a4;
   color: #002A53;
   border-radius: 50%;
 }
 
 ol {
-  margin-top: 30px;
+  margin-top: 15px;
 }
 
 ol li {
@@ -78,11 +78,18 @@ ol li {
 
 .todo_style {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5px 0 1.5px 0;
+}
+
+.linecut {
+  display: flex;
   justify-content: left;
   align-items: center;
 }
 
-.todo_style .deleteicon {
+.linecut .deleteicon {
   height: 25px;
   width: 25px;
   background-color: #8566aa;
@@ -93,11 +100,34 @@ ol li {
   box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
 }
 
-.todo_style .deleteicon:hover {
+.linecut .deleteicon:hover {
   background-color: transparent;
   box-shadow: 5px 5px 15px -5px rgba(255, 0, 0, 0.5);
   color: #002A53;
   cursor: pointer;
+}
+
+.todo_style .removetask {
+  height: 25px;
+  width: 25px;
+  background-color: crimson;
+  color: white;
+  border-radius: 50%;
+  margin: 0 45px 0 15px;
+  padding: 5px;
+  /* box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3); */
+  opacity: 0.7;
+  border: none;
+}
+
+.todo_style .removetask:hover {
+  height: 27px;
+  width: 27px;
+  background-color: transparent;
+  box-shadow: rgba(255, 0, 0, 0.4) 0px 5px 15px;
+  color: rgb(255, 0, 0);
+  cursor: pointer;
+  opacity: 1;
 }
 
 @media (max-width:768px) {
