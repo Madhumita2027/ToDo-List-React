@@ -3,5 +3,5 @@ A simple Todo List application using React.js that allows users to manage their 
 
 ## Technologies
 - React.js
-- JavaScript (ES6+)
+- JavaScript (ES6)
 - CSS
