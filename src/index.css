@@ -89,7 +89,7 @@ ol li {
   align-items: center;
 }
 
-.linecut .deleteicon {
+.linecut .taskdone {
   height: 25px;
   width: 25px;
   background-color: #8566aa;
@@ -100,7 +100,7 @@ ol li {
   box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
 }
 
-.linecut .deleteicon:hover {
+.linecut .taskdone:hover {
   background-color: transparent;
   box-shadow: 5px 5px 15px -5px rgba(255, 0, 0, 0.5);
   color: #002A53;

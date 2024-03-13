@@ -7,8 +7,19 @@ function ListComp(props) {
   const [line, setLine] = useState(false);
 
   const cutIt = () => {
-    setLine(prev => !prev);
-  };
+    setLine(true);
+  }
+  
+  const deleteTask = (id) => {
+    props.setNewItem((olditems) => {
+      return olditems.filter((_, index) => {
+        return index !== id;
+      })
+    })
+
+    setLine(false);
+  }
+
 
 
   return (
@@ -16,7 +27,7 @@ function ListComp(props) {
       <div className="linecut">
         <Tooltip title="Done" placement="left">
           <span onClick={cutIt}>
-            <DeleteIcon className="deleteicon" />
+            <DeleteIcon className="taskdone" />
           </span>
         </Tooltip>
         <li style={{ textDecoration: line ? "line-through" : "none" }}>
@@ -28,12 +39,12 @@ function ListComp(props) {
         <CloseIcon
             className="removetask"
             onClick={() => {
-            props.onSelect(props.id);
+            deleteTask(props.id)
           }}
         />
       </Tooltip>
     </div>
-  );
+  )
 }
 
 export default ListComp;

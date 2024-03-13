@@ -15,7 +15,6 @@ function App() {
 
 
   const addItems = () => {
-
     setNewItem((olditems) => {
       return [...olditems, item];
     })
@@ -23,18 +22,6 @@ function App() {
     setItem("");
   }
 
-
-  const deleteTask = (id) => {
-    // console.log('deleted');
-
-    setNewItem((olditems) => {
-      return olditems.filter((arrData, index) => {
-        return index !== id;
-      })
-    })
-  }
-
-  console.log(item);
 
   return (
     <>
@@ -64,7 +51,7 @@ function App() {
               key={index} 
               text={currval} 
               id={index} 
-              onSelect={deleteTask}
+              setNewItem={setNewItem}
               />
             })}
           </ol>
