@@ -1,4 +1,4 @@
-import DeleteIcon from "@mui/icons-material/Delete";
+import DoneIcon from '@mui/icons-material/Done';
 import CloseIcon from "@mui/icons-material/Close";
 import Tooltip from "@mui/material/Tooltip";
 import { useState } from "react";
@@ -27,7 +27,7 @@ function ListComp(props) {
       <div className="linecut">
         <Tooltip title="Done" placement="left">
           <span onClick={cutIt}>
-            <DeleteIcon className="taskdone" />
+            <DoneIcon className="taskdone" />
           </span>
         </Tooltip>
         <li style={{ textDecoration: line ? "line-through" : "none" }}>
